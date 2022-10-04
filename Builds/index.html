@@ -64,11 +64,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Endava",
         productName: "MetaEndava",
-<<<<<<< HEAD
-        productVersion: "0.9",
-=======
         productVersion: "1.0",
->>>>>>> 3c045d7e4dd8f73d400136e635821d1bb53d1ecd
         showBanner: unityShowBanner,
       };
 
@@ -87,11 +83,13 @@
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
 
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
